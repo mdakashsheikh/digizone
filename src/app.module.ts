@@ -6,7 +6,7 @@ import config from 'config'
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://mern123:mern123@mernapp.atv7idg.mongodb.net/digizone'),
+    MongooseModule.forRoot(config.get('mongodbUrl')),
   ],
   controllers: [AppController],
   providers: [AppService],
